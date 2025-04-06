@@ -1,1 +1,20 @@
+## test record
+  * 3D_multi_nav
+  ```
+  mkdir test1
+  cd test1
 
+  ##copy the code from /home/D_cluster/multi_sim/multi/multi_nav/src
+
+  catkin_make
+  source devel/setup.bash
+  roslaunch lite3_slam slam.launch
+  ## ERROR1
+  
+  
+  ```
+  troubleshoot 
+  * ERROR1
+    - can't find the file
+  * Solution:
+  
