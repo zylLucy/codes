@@ -1,4 +1,4 @@
-# Demo：（name）
+# Demo：slam建图
 
 ## 前期了解：
 * 本次实验需要涉及到哪些文件这些文件的作用是什么？关键参数说明（如果重要），目录结构说明
@@ -8,9 +8,10 @@
 	2. param_2:方向参数
 	3. ...
 * File：
-	1. file_1: 这个文件控制移动（isolation）
+	1. start_transfer.sh: 传递机器狗的运动参数
 		- 关键函数：move(parameter_1,parameter_2,...)
-	2. file_2:
+	2. start_lslidar.sh:  开启机器狗的雷达
+	3. start_slam.sh:  开启slam建图功能 
 		- 
 * Directory structure：(标注Demo所需关键文件)
 ```
@@ -57,8 +58,8 @@ project-root/                     # 项目根目录
 
 ```
 ## 步骤：
-* 要求完整包括文字说明，等
-* example：
+* 要求完整包括文字说明等
+* 步骤1：
 	* 运行此程序要进行
 .
 
