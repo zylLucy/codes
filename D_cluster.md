@@ -59,15 +59,25 @@ lite_cog/                     # 项目根目录
 ## 步骤：
 * 步骤1：主从机配置连接
 	* 主机中打开终端，输入命令：gedit ~/.bashrc
-	  修改如下命令：
-		export ROS_HOSTNAME=本机IP地址
-		export ROS_MASTER_URI=http://主机IP:11311  #主机中三个IP地址相同
-		export ROS_IP=自己IP
+		- 修改如下命令：
+ 
+		. 		
+
+			 export ROS_HOSTNAME=本机IP地址
+			 export ROS_MASTER_URI=http://主机IP:11311  #主机中三个IP地址相同
+			 export ROS_IP=自己IP
+  
+		.
 	* 从机中打开终端，输入命令：gedit ~/.bashrc
-	  修改如下命令：
-		export ROS_HOSTNAME=本机IP地址           #从机在WiFi下对应的IP地址
-		export ROS_MASTER_URI=http://主机IP:11311
-		export ROS_IP=自己IP
+		- 修改如下命令：
+  
+		.
+
+			export ROS_HOSTNAME=本机IP地址           #从机在WiFi下对应的IP地址
+			export ROS_MASTER_URI=http://主机IP:11311
+			export ROS_IP=自己IP
+		.
+
 	* NoMachine中点击edit connection将Host改为从机在WiFi下对应的IP地址
 * 步骤2：检测主从机是否配置成功
 	* 主机中打开终端，输入命令：roscore
