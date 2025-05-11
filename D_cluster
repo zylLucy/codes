@@ -2,7 +2,6 @@
 
 ## 前期了解：
 * 本次实验需要涉及到哪些文件这些文件的作用是什么？关键参数说明（如果重要），目录结构说明
-* example：
 * Parameter：
 	1. param_1:速度参数
 	2. param_2:方向参数
@@ -15,7 +14,7 @@
 		- 
 * Directory structure：(标注Demo所需关键文件)
 ```
-project-root/                     # 项目根目录
+lite_cog/                     # 项目根目录
 │
 ├── docs/                         # 文档目录
 │   ├── requirements.md           # 需求文档
@@ -58,9 +57,42 @@ project-root/                     # 项目根目录
 
 ```
 ## 步骤：
-* 要求完整包括文字说明等
-* 步骤1：
-	* 运行此程序要进行
+* 步骤1：主从机配置连接
+	* 主机中打开终端，输入命令：gedit ~/.bashrc
+	  修改如下命令：
+		export ROS_HOSTNAME=本机IP地址
+		export ROS_MASTER_URI=http://主机IP:11311  #主机中三个IP地址相同
+		export ROS_IP=自己IP
+	* 从机中打开终端，输入命令：gedit ~/.bashrc
+	  修改如下命令：
+		export ROS_HOSTNAME=本机IP地址           #从机在WiFi下对应的IP地址
+		export ROS_MASTER_URI=http://主机IP:11311
+		export ROS_IP=自己IP
+	* NoMachine中点击edit connection将Host改为从机在WiFi下对应的IP地址
+* 步骤2：检测主从机是否配置成功
+	* 主机中打开终端，输入命令：roscore
+	  新建另一个终端，输入命令：rosrun turtlesim turtle_teleop_key
+	* 从机上打开终端输入命令：rosrun turtlesim turtlesim_node
+	* 输入后从机会弹出一个有小乌龟窗口，若在主机上使用键盘能控制从机小乌龟的运动，即主从机配置成功
+* 步骤3：打开transfer
+	* 从机中打开终端，输入以下命令（后续操作都在从机上进行）：
+		cd /home/ysc/lite_cog/system/scripts/tranfer
+		./start_transfer.sh
+* 步骤4：打开感应雷达
+	* 新建终端，输入以下命令：
+		cd /home/ysc/lite_cog/system/scripts/lidar
+		./start_lslidar.sh
+* 步骤5：开启slam建图
+	* 新建终端，输入以下命令：
+		cd /home/ysc/lite_cog/system/scripts/slam
+		./start_slam.sh
+	* 回车执行命令后，会弹出两个终端和rviz界面。两个终端分别对应创建图像和保存图像
+* 步骤6：遥控机器狗建图
+	* 遥控机器狗环绕需要构建地图的区域行走
+	* 行走完后进入创建图像对应终端按“1”建图，打开rviz
+	* 进入保存图像对应终端按“2”保存图像，保存路径为/home/ysc/lite_cog/system/map，会有lite3.pgm,lite3.pgd,lite3.yaml等文件
+	* 若
+	
 .
 
 			./run.exe
