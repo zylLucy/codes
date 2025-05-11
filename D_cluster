@@ -1,0 +1,78 @@
+# Demo：（name）
+
+## 前期了解：
+* 本次实验需要涉及到哪些文件这些文件的作用是什么？关键参数说明（如果重要），目录结构说明
+* example：
+* Parameter：
+	1. param_1:速度参数
+	2. param_2:方向参数
+	3. ...
+* File：
+	1. file_1: 这个文件控制移动（isolation）
+		- 关键函数：move(parameter_1,parameter_2,...)
+	2. file_2:
+		- 
+* Directory structure：(标注Demo所需关键文件)
+```
+project-root/                     # 项目根目录
+│
+├── docs/                         # 文档目录
+│   ├── requirements.md           # 需求文档
+│   ├── design.md                 # 设计文档
+│   ├── api/                      # API文档
+│   └── diagrams/                 # 系统架构图/流程图
+│
+├── src/                          # 源代码目录
+│   ├── main/                     # 主代码
+│   │   ├── java/                 # Java代码 (或其他语言)
+│   │   ├── resources/            # 资源文件
+│   │   └── webapp/               # Web应用资源 (如适用)
+│   │
+│   └── test/                     # 测试代码
+│       ├── java/                 # 测试代码
+│       └── resources/            # 测试资源
+│
+├── lib/                          # 第三方库/依赖
+├── build/                        # 构建输出目录
+│   ├── classes/                  # 编译后的类文件
+│   ├── reports/                  # 测试报告
+│   └── dist/                     # 发布包
+│
+├── config/                       # 配置文件目录
+│   ├── dev/                      # 开发环境配置
+│   ├── test/                     # 测试环境配置
+│   └── prod/                     # 生产环境配置
+│
+├── scripts/                      # 脚本目录
+│   ├── deploy.sh                 # 部署脚本
+│   ├── build.sh                  # 构建脚本
+│   └── db/                       # 数据库脚本
+│
+├── logs/                         # 日志文件目录
+├── tmp/                          # 临时文件目录
+│
+├── README.md                     # 项目说明文件
+├── LICENSE                       # 许可证文件
+└── .gitignore                    # Git忽略规则
+
+```
+## 步骤：
+* 要求完整包括文字说明，等
+* example：
+	* 运行此程序要进行
+.
+
+			./run.exe
+
+.
+
+
+## 问题说明 & 解决
+
+* 问题1：（说明简述即可不需要把error全部粘贴）
+	* 解决说明：
+		* ……
+	* 解决步骤：
+		1. 进行什么什么
+		2. 运行什么什么
+		3. 安装什么什么
