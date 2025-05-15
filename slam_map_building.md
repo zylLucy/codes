@@ -84,26 +84,32 @@ lite_cog/                     # 项目根目录
 	  新建另一个终端，输入命令：rosrun turtlesim turtle_teleop_key
 	* 从机上打开终端输入命令：rosrun turtlesim turtlesim_node
 	* 输入后从机会弹出一个有小乌龟窗口，若在主机上使用键盘能控制从机小乌龟的运动，即主从机配置成功
-* 步骤3：打开transfer
-	* 从机中打开终端，输入以下命令（后续操作都在从机上进行）：
+* 步骤3：执行杀死进程脚本
+	* 如果之前有进行过建图操作，需要先执行以下命令（若没有直接跳到下一步），避免影响后续进程
+ 	* 新建终端，输入以下命令：
+		cd /home/ysc/lite_cog/system
+		./kill_all.sh
+* 步骤4：打开transfer
+	* 从机中打开终端，输入以下命令（后续操作都在从机上进行）：   
 		cd /home/ysc/lite_cog/system/scripts/tranfer
 		./start_transfer.sh
-* 步骤4：打开感应雷达
+* 步骤5：打开感应雷达
 	* 新建终端，输入以下命令：
 		cd /home/ysc/lite_cog/system/scripts/lidar
 		./start_lslidar.sh
-* 步骤5：开启点云建图程序
+* 步骤6：开启点云建图程序
 	* 新建终端，输入以下命令：
 		cd /home/ysc/lite_cog/system/scripts/slam
 		./start_slam.sh
 	* 回车执行命令后，会弹出两个终端和rviz界面。两个终端分别对应生成栅格地图和保存栅格地图
-* 步骤6：遥控机器狗建图
+* 步骤7：遥控机器狗建图
 	* 遥控机器狗环绕需要构建地图的区域行走
 	* 行走完后进入创建图像对应终端按“1”，将三维点云文件（.pcd）转换为栅格地图（.pcm），当弹出rviz窗口有对应栅格地图后可执行下一步
 	* 进入保存图像对应终端按“2”保存图像，默认保存路径为/home/ysc/lite_cog/system/map，会有lite3.pgm,lite3.pgd,lite3.yaml等文件
               #若文件夹中有以前建立的地图，可将以前的建图移动到其它文件夹，避免覆盖
 	* 若栅格地图与实际环境有不相符之处，可打开终端输入gimp打开修图软件，将栅格地图文件拖到软件中进行修改。其中黑色为障碍物，白色为可通行区域，灰色为未知区域
-        * 修改后在左上方菜单栏选择File - Overwrite
+        * 修改后在左上方菜单栏选择File - Overwrite usr_map.pgm对原文件进行覆盖（注意不要选择File - Save）
+        * 
 	
 .
 
