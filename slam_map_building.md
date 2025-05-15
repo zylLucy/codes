@@ -98,6 +98,7 @@ lite_cog/                     # 项目根目录
 	* 从机中打开终端，输入以下命令（后续操作都在从机上进行）：
 
   		.
+   
 			cd /home/ysc/lite_cog/system/scripts/tranfer
 			./start_transfer.sh
    		.
