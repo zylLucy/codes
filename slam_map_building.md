@@ -75,7 +75,7 @@ lite_cog/                     # 项目根目录
 
 			export ROS_HOSTNAME=本机IP地址           #从机在WiFi下对应的IP地址
 			export ROS_MASTER_URI=http://主机IP:11311
-			export ROS_IP=主机IP
+			export ROS_IP=本机IP
 		.
 
 	* NoMachine中点击edit connection将Host改为从机在WiFi下对应的IP地址
