@@ -79,6 +79,7 @@ lite_cog/                     # 项目根目录
 		.
 
 	* NoMachine中点击edit connection将Host改为从机在WiFi下对应的IP地址
+ 	* 主机和从机都是连在Xiaomi_2A1C，不能访问外网
 * 步骤2：检测主从机是否配置成功
 	* 主机中打开终端，输入命令：roscore
 	  新建另一个终端，输入命令：rosrun turtlesim turtle_teleop_key
