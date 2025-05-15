@@ -6,7 +6,7 @@
 	1. param_1:速度参数
 	2. param_2:方向参数
 	3. ...
-* File：
+* File： 
 	1. start_transfer.sh: 传递机器狗的运动参数
 		- 关键函数：move(parameter_1,parameter_2,...)
 	2. start_lslidar.sh:  开启机器狗的雷达
