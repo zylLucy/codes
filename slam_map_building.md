@@ -87,8 +87,12 @@ lite_cog/                     # 项目根目录
 * 步骤3：执行杀死进程脚本
 	* 如果之前有进行过建图操作，需要先执行以下命令（若没有直接跳到下一步），避免影响后续进程
  	* 新建终端，输入以下命令：
-		cd /home/ysc/lite_cog/system
-		./kill_all.sh
+	.
+
+			cd /home/ysc/lite_cog/system
+			./kill_all.sh
+	.
+	
 * 步骤4：打开transfer
 	* 从机中打开终端，输入以下命令（后续操作都在从机上进行）：   
 		cd /home/ysc/lite_cog/system/scripts/tranfer
@@ -99,6 +103,7 @@ lite_cog/                     # 项目根目录
 		./start_lslidar.sh
 * 步骤6：开启点云建图程序
 	* 新建终端，输入以下命令：
+   
 		cd /home/ysc/lite_cog/system/scripts/slam
 		./start_slam.sh
 	* 回车执行命令后，会弹出两个终端和rviz界面。两个终端分别对应生成栅格地图和保存栅格地图
