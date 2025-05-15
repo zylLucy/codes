@@ -104,13 +104,20 @@ lite_cog/                     # 项目根目录
    		.
 * 步骤5：打开感应雷达
 	* 新建终端，输入以下命令：
-		cd /home/ysc/lite_cog/system/scripts/lidar
-		./start_lslidar.sh
+
+   		.
+
+			cd /home/ysc/lite_cog/system/scripts/lidar
+			./start_lslidar.sh
+   		.
 * 步骤6：开启点云建图程序
 	* 新建终端，输入以下命令：
-   
-		cd /home/ysc/lite_cog/system/scripts/slam
-		./start_slam.sh
+
+  		.
+
+			cd /home/ysc/lite_cog/system/scripts/slam
+			./start_slam.sh
+   		.
 	* 回车执行命令后，会弹出两个终端和rviz界面。两个终端分别对应生成栅格地图和保存栅格地图
 * 步骤7：遥控机器狗建图
 	* 遥控机器狗环绕需要构建地图的区域行走
