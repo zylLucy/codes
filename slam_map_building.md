@@ -16,11 +16,11 @@ Multi_robot/
 ├── pipline/
 |  ├──build/
 |  ├──devel/
-|  ├──src/					#
-│  	├── pipeline_tracking/			#
-|           ├──action				#
-|           ├──data				#
-|           ├──Readme				#
+|  ├──src/					
+│  	├── pipeline_tracking/			
+|           ├──action				
+|           ├──data				
+|           ├──Readme				
 |           ├──scripts/
 |		├──__pycache__
 |		├──.vscode
@@ -33,18 +33,18 @@ Multi_robot/
 |		├──TA_minmax.py
 |               ├──Task.py
 |               ├──TaskPoint.py
-|               └──TaskTransfer.py		#
-|           ├──tools				#
-|           ├──CMakeLists.txt			#
-|           └──package.xml			#
-|   └── CMakeLists.txt 				#
-└──.catkin_workspace				#
+|               └──TaskTransfer.py		
+|           ├──tools				
+|           ├──CMakeLists.txt		
+|           └──package.xml			
+|   └── CMakeLists.txt 				
+└──.catkin_workspace				
 
 
 lite_cog/                			#项目根目录
 │
-├── deb/                       			#
-├── drivers/					#                    
+├── deb/                       			
+├── drivers/					                  
 ├── nav/					#导航模块
 |   ├──build/					#编译生成目录，存放编译中间文件
 |   ├──devel/					#开发环境目录，存放编译后的可执行文件
@@ -74,22 +74,22 @@ lite_cog/                			#项目根目录
 │      ├──ndt_omp
 │      ├──teb_local_planner
 │      └──CMakeLists.txt                
-├── others/                    			#
-├── pipeline/					#
+├── others/                    		
+├── pipeline/					
 |   ├──bulid/					#编译生成目录
 |   ├──devel/					#开发环境目录
-|   └──src/					#
-│       ├── pipeline_tracking/			#
-|           ├──action				#
-|           ├──data				#
-|           ├──Readme				#
+|   └──src/					
+│       ├── pipeline_tracking/			
+|           ├──action				
+|           ├──data				
+|           ├──Readme				
 |           ├──scripts
-|           ├──tools				#
-|               ├──location_record.py		#
-|               └──location_record_en.py	#
-|           ├──CMakeLists.txt			#
-|           └──package.xml			#
-|      └── CMakeLists.txt 			#
+|           ├──tools				
+|               ├──location_record.py		
+|               └──location_record_en.py	
+|           ├──CMakeLists.txt			
+|           └──package.xml			
+|      └── CMakeLists.txt 			
 ├── slam/
 |   ├──build/					#编译生成目录
 |   ├──devel/					#开发环境目录
@@ -99,7 +99,7 @@ lite_cog/                			#项目根目录
 |      ├──octomap_mapping			#构建3D占用地图
 |      ├──pcd2grid				#将三维点云地图(.pcd)转为栅格地图(.pgm)并发布
 |      └──CMakeLists.txt		        #SLAM模块编译配置    
-├── system/					#
+├── system/					
 |   ├──map/					#地图文件存储目录
 |      ├──lite3.pcd				#3D点云地图文件
 |      ├──lite3.pgm				#2D栅格地图图像文件
@@ -120,9 +120,9 @@ lite_cog/                			#项目根目录
 |      └──voa					#语音交互相关脚本
 |   ├──all_start.sh				#实现开机自启动
 |   └──kill_all.sh				#一键停止所有模块
-├── track                         		#
-├── transfer                  			#	
-└── voa                  			#
+├── track                         		
+├── transfer                  				
+└── voa                  			
 
 ```
 ## 步骤：
