@@ -12,46 +12,117 @@
 		- 
 * Directory structure：(标注Demo所需关键文件)
 ```
-lite_cog/                     # 项目根目录
+Multi_robot/
+├── pipline/
+|  ├──build/
+|  ├──devel/
+|  ├──src/					#
+│  	├── pipeline_tracking/			#
+|           ├──action				#
+|           ├──data				#
+|           ├──Readme				#
+|           ├──scripts/
+|		├──__pycache__
+|		├──.vscode
+|               ├──constants.py
+|               ├──dyn_reconfigure.py
+|		├──MT.py
+|		├──pub_target.py
+|               ├──RobotCommander.py
+|		├──start_MT.sh			#可以在Rviz中执行多目标跟踪、目标发布等任务
+|		├──TA_minmax.py
+|               ├──Task.py
+|               ├──TaskPoint.py
+|               └──TaskTransfer.py		#
+|           ├──tools				#
+|           ├──CMakeLists.txt			#
+|           └──package.xml			#
+|   └── CMakeLists.txt 				#
+└──.catkin_workspace				#
+
+
+lite_cog/                			#项目根目录
 │
-├── docs/                         # 文档目录
-│   ├── requirements.md           # 需求文档
-│   ├── design.md                 # 设计文档
-│   ├── api/                      # API文档
-│   └── diagrams/                 # 系统架构图/流程图
-│
-├── src/                          # 源代码目录
-│   ├── main/                     # 主代码
-│   │   ├── java/                 # Java代码 (或其他语言)
-│   │   ├── resources/            # 资源文件
-│   │   └── webapp/               # Web应用资源 (如适用)
-│   │
-│   └── test/                     # 测试代码
-│       ├── java/                 # 测试代码
-│       └── resources/            # 测试资源
-│
-├── lib/                          # 第三方库/依赖
-├── build/                        # 构建输出目录
-│   ├── classes/                  # 编译后的类文件
-│   ├── reports/                  # 测试报告
-│   └── dist/                     # 发布包
-│
-├── config/                       # 配置文件目录
-│   ├── dev/                      # 开发环境配置
-│   ├── test/                     # 测试环境配置
-│   └── prod/                     # 生产环境配置
-│
-├── scripts/                      # 脚本目录
-│   ├── deploy.sh                 # 部署脚本
-│   ├── build.sh                  # 构建脚本
-│   └── db/                       # 数据库脚本
-│
-├── logs/                         # 日志文件目录
-├── tmp/                          # 临时文件目录
-│
-├── README.md                     # 项目说明文件
-├── LICENSE                       # 许可证文件
-└── .gitignore                    # Git忽略规则
+├── deb/                       			#
+├── drivers/					#                    
+├── nav/					#导航模块
+|   ├──build/					#编译生成目录，存放编译中间文件
+|   ├──devel/					#开发环境目录，存放编译后的可执行文件
+|   └──src/					#导航功能源代码
+│      ├──fast_gicp				#基于GICP算法，提供快速的点云配准算法实现，用于高精度地图匹配
+│      ├──hdl_global_localization		#全局定位功能包，用于在已知地图中确定初始位置
+│      ├──hdl_localization/			#定位功能包
+|         ├──apps
+|         ├──data
+|         ├──docker
+|         ├──include
+|         ├──launch/				#启动文件目录
+|            ├──hdl_localization.launch
+|            └──local_rslidar_imu.launch    	#用于改变地图路径或名称时配置所需地图名称和路径
+|         ├──msg
+|         ├──rviz/				#Rviz配置文件
+|            └──hdl_localization.rviz		#定位可视化配置
+|         ├──scripts
+|         ├──src
+|         ├──CMakeLists.txt
+|         ├──LICENSE
+|         ├──nodelet_plugins.xml
+|         ├──package.xml			#ROS功能包描述文件
+|         └──README.md				#功能包使用说明
+│      ├──move_base				#实现路径规划和导航控制
+│      ├──navigation
+│      ├──ndt_omp
+│      ├──teb_local_planner
+│      └──CMakeLists.txt                
+├── others/                    			#
+├── pipeline/					#
+|   ├──bulid/					#编译生成目录
+|   ├──devel/					#开发环境目录
+|   └──src/					#
+│       ├── pipeline_tracking/			#
+|           ├──action				#
+|           ├──data				#
+|           ├──Readme				#
+|           ├──scripts
+|           ├──tools				#
+|               ├──location_record.py		#
+|               └──location_record_en.py	#
+|           ├──CMakeLists.txt			#
+|           └──package.xml			#
+|      └── CMakeLists.txt 			#
+├── slam/
+|   ├──build/					#编译生成目录
+|   ├──devel/					#开发环境目录
+|   └──src/					#建图功能源代码
+|      ├──faster-lio				#构建3D点云地图(.pcd)
+|      ├──map_server				#保存和加载栅格地图(.pgm)
+|      ├──octomap_mapping			#构建3D占用地图
+|      ├──pcd2grid				#将三维点云地图(.pcd)转为栅格地图(.pgm)并发布
+|      └──CMakeLists.txt		        #SLAM模块编译配置    
+├── system/					#
+|   ├──map/					#地图文件存储目录
+|      ├──lite3.pcd				#3D点云地图文件
+|      ├──lite3.pgm				#2D栅格地图图像文件
+|      └──lite3.yaml				#地图配置文件，定义地图原点、分辨率等参数
+|   ├──scripts/					#系统脚本目录
+|      ├──depth_camera				#深度相机相关脚本
+|      ├──lidar/				#激光雷达相关脚本
+|         ├──start_livox.sh			#启动Livox系列激光雷达
+|         └──start_lslidar.sh			#启动LS系列激光雷达
+|      ├──nav/					#导航相关脚本
+|         └──start_nav.sh			#启动导航功能
+|      ├──slam/					#SLAM相关脚本
+|         ├──gridmap.sh				#创建2D栅格地图
+|         ├──save_map.sh			#保存地图
+|         └──start_slam.sh			#启动建图程序
+|      ├──transfer/				#数据传输相关脚本
+|         └──start_transfer.sh			#启动数据传输功能
+|      └──voa					#语音交互相关脚本
+|   ├──all_start.sh				#实现开机自启动
+|   └──kill_all.sh				#一键停止所有模块
+├── track                         		#
+├── transfer                  			#	
+└── voa                  			#
 
 ```
 ## 步骤：
