@@ -196,7 +196,21 @@ lite_cog/                			#项目根目录
               #若文件夹中有以前建立的地图，可将以前的建图移动到其它文件夹，避免覆盖
 	* 若栅格地图与实际环境有不相符之处，可打开终端输入gimp打开修图软件，将栅格地图文件拖到软件中进行修改。其中黑色为障碍物，白色为可通行区域，灰色为未知区域
  	* 修改后在左上方菜单栏选择File - Overwrite usr_map.pgm对原文件进行覆盖（注意不要选择File - Save）
-	
+	* 如果需要改变地图文件保存路径或文件名称，需在/home/ysc/lite_cog/nav/src/hdl_localization/launch/local_rslidar_imu.launch文件中配置所需地图名称和路径
+
+    		.
+
+   			1  <arg name="map_name" default="lite3" /> //Define Map File Name
+  			2  ...
+  			3  <node name="MapServer" pkg="map_server" type="map_server"
+   			   args="/home/ysc/lite_cog/system/map/$(arg map_name).yaml"/>
+   			4
+  			5  ...
+  	 		6  ...
+  			7  <paramname="globalmap_pcd"value="/home/ysc/lite_cog/system/map/$(arg map_name).pcd"
+    			8  /> 
+			   ...
+   		.
 
 ## 问题说明 & 解决
 
