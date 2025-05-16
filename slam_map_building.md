@@ -131,7 +131,7 @@ lite_cog/                     # 项目根目录
 
 ## 问题说明 & 解决
 
-* 问题1：failed to contact with master
+* 问题1：RLException: unable to contact ROS master
 	* 解决说明：
 		* 这个报错说明主从机没有配置成功
 	* 解决步骤：
