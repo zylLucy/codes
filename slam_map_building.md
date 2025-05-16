@@ -211,7 +211,7 @@ lite_cog/                			#项目根目录
   			7  <paramname="globalmap_pcd"value="/home/ysc/lite_cog/system/map/$(arg map_name).pcd"
     			8  /> 
 			   ...
-   		.
+   		.	
 
 ## 问题说明 & 解决
 
@@ -221,3 +221,5 @@ lite_cog/                			#项目根目录
 	* 解决步骤：
 		1. 执行步骤2
   		2. 若仍有报错，检查主从机IP地址是否正确，重启NoMachine
+		3. 若还有报错，试着重启机器狗
+  		4. 如果还是报错，可能是机器狗本身通信问题 
