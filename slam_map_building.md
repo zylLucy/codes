@@ -1,14 +1,12 @@
 # Demo：slam建图
 
 ## 前期了解：
-* 本次实验需要涉及到哪些文件这些文件的作用是什么？关键参数说明（如果重要），目录结构说明
 * Parameter：
-	1. param_1:速度参数
-	2. param_2:方向参数
-	3. ...
+	
+ 
 * File： 
 	1. start_transfer.sh: 传递机器狗的运动参数
-		- 关键函数：move(parameter_1,parameter_2,...)
+		- 
 	2. start_lslidar.sh:  开启机器狗的雷达
 	3. start_slam.sh:  开启slam建图功能 
 		- 
