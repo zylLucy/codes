@@ -1,7 +1,7 @@
 # codes
 
 
-## Method of analysis demo: 
+## Method of analysis: 
 * **In the following preceding procedure, analyze the meaning of each command in the demo and learning the principle of the step** 
   1. Clear the **frame** of achieving.
   2. Peel off layer by layer and trace the source (Until you find the key files and key parameters).
