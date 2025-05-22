@@ -8,6 +8,7 @@
 	1. start_transfer.sh: 传递机器狗的运动参数
 		- 
 	2. start_lslidar.sh:  开启机器狗的雷达
+		-
 	3. start_slam.sh:  开启slam建图功能 
 		- 
 * Directory structure：(标注Demo所需关键文件)
